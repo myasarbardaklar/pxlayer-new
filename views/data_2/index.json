@@ -1,0 +1,17 @@
+{
+  "name": "Erol BARDAKLAR",
+  "head": {
+    "title": "Homepage",
+    "titleTemplate": "%s - Homepage",
+    "meta": [
+      {
+        "name": "description",
+        "content": "Homepage description"
+      },
+      {
+        "name": "theme-color",
+        "content": "Homepage color"
+      }
+    ]
+  }
+}

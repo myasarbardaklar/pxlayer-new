@@ -1,0 +1,33 @@
+{
+  "html": {
+    "lang": "en",
+    "dir": "ltr"
+  },
+  "head": {
+    "title": "PXLayer Document",
+    "titleTemplate": "%s - Pug.js",
+    "meta": [
+      {
+        "http-equiv": "Expires",
+        "content": 0
+      },
+      {
+        "name": "directory",
+        "content": "submission"
+      },
+      {
+        "name": "description",
+        "content": "Default description"
+      },
+      {
+        "name": "theme-color",
+        "content": "Default color"
+      }
+    ],
+    "icon": {
+      "type": "image/png",
+      "sizes": "192x192",
+      "href": "favicon.png"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mixin drawer(args)
+  // aside.drawer-navigation 
+  +layer({
+    ':class': `$store.layers.addClass('${args.tag}')`,
+    class: "pxl-drawer"
+  })
+    aside.pxl-drawer__body&attributes(args.parent)
+      label.pxl-drawer__away(
+        @click=`$store.layers.hide('${args.away[0]}', ${args.away[1]})`
+      )
+      .pxl-drawer__container&attributes(args.container)
+        block
+  // ## aside.drawer-navigation 

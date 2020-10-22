@@ -1,0 +1,40 @@
+include ../components/_init.pug
+include ../widgets/_init.pug
+include ../partials/_init.pug
+
+doctype html
+html(lang="en" dir="ltr")
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='ie=edge')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      title #{self.head.title} | Pug.js
+      meta(name='theme-color', content='#000')
+      block stylesheets
+        include ../base/stylesheets.pug
+      link(rel='icon', type='image/png', sizes='192x192', href='favicon.png')
+
+  body(:class="{ 'is-any-layer-active': layer.items.mainLayer === 2 }")
+    block modals
+
+    block fixed
+      +BottomBar()
+    
+    section.main-layer
+      block header
+        +main-navbar
+
+      block body
+        // main.main-content 
+        main.main-content
+          block content
+        // ## main.main-content 
+      
+      block footer
+        +main-footer
+    
+    // scripts
+    block scripts
+      include ../base/scripts.pug
+    // ## scripts

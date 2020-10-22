@@ -1,0 +1,38 @@
+.pxl-modal
+  transition: all 500ms
+
+  &.pxl-layer--active,
+  &.pxl-layer--behind
+    .pxl-modal__container
+      transform: translateY(0)
+
+  &__body
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 100%
+
+  &__away
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    size: 100%
+    z-index: 1
+    background-image: linear-gradient(to bottom, #8E2DE2, #4A00E0)
+    opacity: .15
+
+  &__container
+    position: relative
+    z-index: 2
+    background-color: $white
+    width: 600px
+    color: $gray-600
+    padding: 15px
+    transform: translateY(-100%)
+    transition: all 500ms
