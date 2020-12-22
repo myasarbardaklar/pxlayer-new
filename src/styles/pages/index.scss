@@ -1,0 +1,46 @@
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  color: $color-3;
+  fill: $color-3;
+  border: 2px solid $color-3;
+  border-radius: 4px;
+  transition: all 500ms;
+  @include padding(pxRem(10) pxRem(18) pxRem(8));
+  @include margin(pxRem(48));
+
+  &:hover {
+    background-color: lighten($color-1, 45%);
+    color: $color-1;
+    border-color: $color-1;
+
+    .pxl-icon {
+      svg {
+        fill: $color-1;
+        @include second-icon;
+      }
+    }
+  }
+
+  &:active {
+    background-color: lighten($color-3, 25%);
+    color: $color-3;
+    border-color: $color-3;
+
+    .pxl-icon {
+      svg {
+        fill: $color-3;
+        @include second-icon;
+      }
+    }
+  }
+
+  .pxl-icon {
+    margin-right: pxRem(10);
+    @include size(24px);
+
+    svg {
+      transition: all 500ms;
+    }
+  }
+}

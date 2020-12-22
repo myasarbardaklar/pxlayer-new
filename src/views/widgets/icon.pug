@@ -1,0 +1,11 @@
+mixin svg(name, type)
+  if type === 'animated'
+    span.pxl-icon
+      svg&attributes(attributes)
+        use(xlink:href='./svg/sprite.svg#' + name)
+      svg&attributes(attributes)
+        use(xlink:href='./svg/sprite.svg#' + name + '_second')
+  else
+    span.pxl-icon
+      svg&attributes(attributes)
+        use(xlink:href='./svg/sprite.svg#' + name)

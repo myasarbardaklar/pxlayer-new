@@ -1,0 +1,57 @@
+mixin c-slide-nav
+  // nav.w-slide-nav 
+  nav.w-slide-nav.c-slide-nav
+    .w-slide-nav__wrapper
+      .w-slide-nav__item(data-slide="main")
+        a(href="#", data-slide-next="home")
+          span Home
+          +svg('right-chevron')
+        a(href="#")
+          span About
+        a(href="#", data-slide-next="contact")
+          span Contact
+          +svg('right-chevron')
+      
+      .w-slide-nav__item(data-slide="home")
+        a(href="#", data-slide-prev="main")
+          +svg('left-chevron')
+          span Back
+        a(href="#", data-slide-next="home-2")
+          span Home 2
+          +svg('right-chevron')
+        h1 Home
+      
+      .w-slide-nav__item(data-slide="home-2")
+        a(href="#", data-slide-prev="home")
+          +svg('left-chevron')
+        h1 Home 2
+      
+      .w-slide-nav__item(data-slide="contact")
+        a(href="#", data-slide-prev="main")
+          +svg('left-chevron')
+        a(href="#", data-slide-next="contact-2")
+          span Contact 2
+          +svg('right-chevron')
+        h1 Contact
+      
+      .w-slide-nav__item(data-slide="contact-2")
+        a(href="#", data-slide-prev="contact")
+          +svg('left-chevron')
+        a(href="#", data-slide-next="contact-3")
+          span Contact 3
+          +svg('right-chevron')
+        h1 Contact 2
+      
+      .w-slide-nav__item(data-slide="contact-3")
+        a(href="#", data-slide-prev="contact-2")
+          +svg('left-chevron')
+        a(href="#", data-slide-next="contact-4")
+          span Contact 4
+          +svg('right-chevron')
+        h1 Contact 3
+      
+      .w-slide-nav__item(data-slide="contact-4")
+        a(href="#", data-slide-prev="contact-3")
+          +svg('left-chevron')
+        h1 Contact 4
+  // ## nav.w-slide-nav 

@@ -1,0 +1,26 @@
+include ../../base/utilities.pug
+
+doctype html
+html(lang="en" dir="ltr")
+  head
+    block head
+      include ./head.pug
+
+  body
+    block fixed
+    
+    block header
+      +default-header
+    
+    // main.default-content 
+    main.default-content
+      block body
+    // ## main.default-content 
+    
+    block footer
+      +default-footer
+    
+    // scripts
+    block scripts
+      include ./scripts.pug
+    // ## scripts

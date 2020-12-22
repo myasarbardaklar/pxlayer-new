@@ -1,0 +1,86 @@
+.w-drawer-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: $drawer-navigation-background;
+  transition: $drawer-navigation-transition-out;
+  @include size(100%);
+  @include visible(false);
+
+  // left side styles
+  &.w-drawer-navigation--left {
+    .w-drawer-navigation__wrapper {
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      border-right-radius: $drawer-navigation__wrapper-border-radius;
+      box-shadow: $drawer-navigation__wrapper--left-box-shadow;
+      width: $drawer-navigation__wrapper--left-width;
+      height: $drawer-navigation__wrapper--left-height;
+    }
+  }
+
+  // right side styles
+  &.w-drawer-navigation--right {
+    .w-drawer-navigation__wrapper {
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      border-left-radius: $drawer-navigation__wrapper-border-radius;
+      box-shadow: $drawer-navigation__wrapper--right-box-shadow;
+      width: $drawer-navigation__wrapper--right-width;
+      height: $drawer-navigation__wrapper--right-height;
+    }
+  }
+
+  // bottom side styles
+  &.w-drawer-navigation--bottom {
+    .w-drawer-navigation__wrapper {
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%);
+      border-top-radius: $drawer-navigation__wrapper-border-radius;
+      box-shadow: $drawer-navigation__wrapper--bottom-box-shadow;
+      width: $drawer-navigation__wrapper--bottom-width;
+      height: $drawer-navigation__wrapper--bottom-height;
+    }
+  }
+
+  // when activated
+  &.w-drawer-navigation--activated {
+    pointer-events: auto;
+    z-index: $z-index-1;
+    transition: $drawer-navigation-transition-in;
+    @include visible(true);
+
+    .w-drawer-navigation__wrapper {
+      transition: $drawer-navigation__wrapper-transition-in;
+      transform: none;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    overflow: auto;
+    background: $drawer-navigation__wrapper-background;
+    transition: $drawer-navigation__wrapper-transition-out;
+
+    &__start {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include padding($drawer-navigation__wrapper__start-padding);
+    }
+
+    &__center {
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    width: 120px;
+  }
+}

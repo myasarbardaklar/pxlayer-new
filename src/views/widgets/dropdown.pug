@@ -1,0 +1,13 @@
+mixin dropdown(args)
+  .pxl-dropdown(
+    x-data=`{ ${args.tag}: false }`,
+    @click.away=`${args.tag} = false`
+  )
+    a.pxl-dropdown__toggle(
+      href="#",
+      @click.prevent=`${args.tag} = !${args.tag}`
+    ) Please select a couple
+    .pxl-dropdown__body(
+      :class=`{ 'is-active': ${args.tag} }`
+    )
+      block

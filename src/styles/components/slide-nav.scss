@@ -1,0 +1,48 @@
+.c-slide-nav {
+  user-select: none;
+
+  h1 {
+    color: $black;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black;
+    font-weight: $weight-semibold;
+    font-size: pxRem(14);
+    border-bottom: 1px solid darken($white, 15%);
+    @include padding(pxRem(16) pxRem(36));
+
+    .pxl-icon {
+      @include size(14px);
+      svg {
+        fill: $black;
+      }
+    }
+
+    &:hover {
+      background-color: $color-1;
+      color: $white;
+
+      .pxl-icon {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+
+    &[data-slide-prev] {
+      justify-content: flex-start;
+
+      .pxl-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+// Load all utilites
+@import 'utilites';
+
+// Base
+@import 'base/init';
+
+// Vendors (Bootstrap, jQuery UI, Owl Carousel...)
+@import 'vendors/init';
+
+// Widgets (buttons, modals, dropdowns...)
+@import 'widgets/init';
+
+// Components (...)
+@import 'components/init';
+
+// Partials (header, footer...)
+@import 'partials/init';
+
+// Pages (home, about, contact...)
+@import 'pages/init';

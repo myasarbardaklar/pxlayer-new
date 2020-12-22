@@ -11,6 +11,5 @@ module.exports = {
   parser: 'babel-eslint',
   extends: ['plugin:prettier/recommended'],
   plugins: ['prettier'],
-  // add your custom rules here
   rules: {}
 }

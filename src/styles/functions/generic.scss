@@ -1,0 +1,12 @@
+@function _get($variable, $value) {
+  @if type-of($variable) == 'list' {
+    @return nth($variable, $value);
+  } @else if type-of($variable) == 'map' {
+    @return map-get($variable, $value);
+  }
+}
+
+@function pxRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
