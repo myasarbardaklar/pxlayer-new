@@ -44,6 +44,7 @@ select,
 button {
   font-family: $body-font-family;
   font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 code,
@@ -72,6 +73,7 @@ a {
   color: $link-color;
   cursor: pointer;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     color: $link-color-hover;

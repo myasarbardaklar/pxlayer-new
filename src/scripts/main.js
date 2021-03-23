@@ -69,17 +69,18 @@ $(document).ready(function () {
       .css('height', $prevItem.outerHeight())
   })
 
-  $('[data-drawer-navigation-trigger]').click(function (e) {
+  $('[data-dn-trigger]').click(function (e) {
     e.preventDefault()
 
-    let drawerNavigationValue = $(this).data('drawer-navigation-trigger')
+    let drawerNavigationValue = $(this).data('dn-trigger')
     let $drawerNavigation = $(
-      `.w-drawer-navigation[data-drawer-navigation="${drawerNavigationValue}"]`
+      `.w-drawer-navigation[data-dn="${drawerNavigationValue}"]`
     )
 
     if ($drawerNavigation) {
       $drawerNavigation.addClass('w-drawer-navigation--activated')
       $('html').css('overflow', 'hidden')
+      $('body').css('padding-right', '17px')
     } else {
       alert('Drawer navigation not found.')
     }
@@ -94,6 +95,7 @@ $(document).ready(function () {
     ) {
       $(this).removeClass('w-drawer-navigation--activated')
       $('html').css('overflow', '')
+      $('body').css('padding-right', '')
     }
   })
   $('.w-drawer-navigation__close').click(function (e) {
@@ -103,5 +105,6 @@ $(document).ready(function () {
 
     $drawerNavigation.removeClass('w-drawer-navigation--activated')
     $('html').css('overflow', '')
+    $('body').css('padding-right', '')
   })
 })

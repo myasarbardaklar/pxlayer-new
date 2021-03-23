@@ -4,7 +4,8 @@
   "description": "Pure CSS framework. There's no JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "g": "node generate"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "async": "^3.2.0",
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.26.13",
+    "consola": "^2.15.0",
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
     "eslint": "^7.15.0",
